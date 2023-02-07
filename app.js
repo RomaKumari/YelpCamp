@@ -90,9 +90,9 @@ app.use((req, res, next) => {
     next();
 })
 
-app.use('https://yelpcamp-b3vz.onrender.com/', userRoutes);
-app.use('https://yelpcamp-b3vz.onrender.com/campgrounds', campgroundsRoutes);
-app.use('https://yelpcamp-b3vz.onrender.com/campgrounds/:id/reviews', reviewsRoutes);
+app.use('/', userRoutes);
+app.use('/campgrounds', campgroundsRoutes);
+app.use('/campgrounds/:id/reviews', reviewsRoutes);
 
 app.get('/', (req, res) => {
     res.render('home');
